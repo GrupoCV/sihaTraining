@@ -21,7 +21,6 @@ const devOptions = {
 
 const bot = new TelegramBot(token, prodOptions);
 
-
 bot.setWebHook(`${url}/bot${token}`);
 
 export {
