@@ -5,6 +5,7 @@ import {
 */
 const TelegramBot = require('node-telegram-bot-api');
 const token = '393865087:AAHQJhT3VuzkGV9XUMr3wh8C2CpkIMY61bI';
+const url = 'https://siha-capacitacion.herokuapp.com/';
 
 declare const process: any;
 
@@ -20,7 +21,9 @@ const devOptions = {
 
 const bot = new TelegramBot(token, prodOptions);
 
+
+bot.setWebHook(`${url}/bot${token}`);
+
 export {
   bot
 }
-
