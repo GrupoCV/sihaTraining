@@ -1,16 +1,16 @@
-import { bot } from "../initBot";
+import { bot } from "../../initBot";
 
 export namespace Index {
 
-    export enum Options {
+    enum Options {
         registrarAusencia = "Registrar ausencia",
         enviarRecordatorio = "Enviar recordatorio",
-        mensajeAcudiente = "Mensaje acudiente"
+        mensajeAcudiente = "Mensaje acudiente",
     }
 
     export namespace Metodos {
 
-        export const sendMessage = (msg: any) => {
+        export const sendMessageBienvenidaDocente = (msg: any) => {
 
             let messageOptions = {
                 parse_mode: 'HTML',
@@ -37,15 +37,13 @@ export namespace Index {
 
             bot.sendMessage(
                 msg.chat.id,
-                `Profesor <b>${msg.from.first_name}</b> ¿Que desea realizar?`,
+                `Bienvenido profesor <b>${msg.from.first_name}</b> ¿Que desea realizar?`,
                 messageOptions
             );
-
         }
-
     }
 
-    export namespace EventHandlers {
+    export namespace eventHandlers {
 
         export const listen = () => {
 
@@ -59,17 +57,14 @@ export namespace Index {
 
                     let messageOptions = {
                         parse_mode: 'HTML',
-                        //aca otro teclado
                     }
 
                     bot.sendMessage(msg.chat.id, "Ausencia registrada", messageOptions);
                 }
             });
-
         }
-
     }
 
 }
 
-Index.EventHandlers.listen();
+Index.eventHandlers.listen();

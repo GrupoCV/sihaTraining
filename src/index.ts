@@ -4,5 +4,9 @@
 require('./initDatabase');
 require('./initBot');
 
-require('./app/index');
-require('./docentes');
+/**
+ * Módulos
+ */
+require('./modulos/docentes');
+
+require('./modulos/index');
