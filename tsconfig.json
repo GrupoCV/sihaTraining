@@ -5,7 +5,7 @@
     "module": "commonjs",
     "strict": true,
     "sourceMap": false,
-    "watch": true,
+    "watch": false,
     "lib":[
       "es6"
     ]
