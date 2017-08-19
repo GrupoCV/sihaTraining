@@ -7,6 +7,7 @@ require('./initBot');
 /**
  * Módulos
  */
-require('./modulos/docentes');
+//require('./modulos/docentes');
+//require('./modulos/cursos');
 
 require('./modulos/index');

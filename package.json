@@ -1,12 +1,13 @@
 {
   "name": "sihaapp",
-  "version": "0.2.6",
+  "version": "0.0.2",
   "engines": {
     "node": "6.11.1"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "prod": "set NODE_ENV=production && node dist/index.js",
+    "test": "node test.js",
+    "build": "set NODE_ENV=production && node dist/index.js",
     "dev": "set NODE_ENV=development && node dist/index.js"
   },
   "dependencies": {
@@ -24,10 +25,6 @@
     "request": "^2.81.0",
     "tape": "^4.7.0",
     "typescript": "^2.4.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
   },
   "keywords": [
     "node",
